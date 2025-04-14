@@ -1,12 +1,13 @@
 import React from 'react';
 import { Table, Th, Td, DeleteButton, TotalRow } from '../styles';
 import { FaTrash } from 'react-icons/fa';
+import "./ExpenseTable.css";
 
 const ExpenseTable = ({ expenses, onDeleteExpense }) => {
   const total = expenses.reduce((acc, expense) => acc + parseFloat(expense.amount), 0);
 
   return (
-    <Table>
+    <Table className='exptable'>
       <thead>
         <tr>
           <Th>#</Th>
